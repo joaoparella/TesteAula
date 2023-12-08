@@ -62,7 +62,7 @@ export class UsuariosArmazenados{
         };
     }
 
-    adicionarAssinatura(id: string,dias: BigInteger){
+    adicionarAssinatura(id: string,dias: number){
         const usuario = this.buscaPorID(id);
 
         usuario.adicionarAssinatura(dias);

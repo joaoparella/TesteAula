@@ -48,7 +48,7 @@ export class UsuarioController{
     }
 
     @Put('/assinatura/:id/:dias')
-    async adicionaAssinatura(@Param('id') id: string, @Param('dias') dias: BigInteger){
+    async adicionaAssinatura(@Param('id') id: string, @Param('dias') dias: number){
         const vencimento = await this.clsUsuariosArmazenados.adicionarAssinatura(id, dias)
 
         return{
